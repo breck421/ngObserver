@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html data-ng-app="ngOb">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="dcterms.rightsHolder" content="Copyright (c) 2014 ClearCapital. All Rights Reserved." />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<title>ngObserver</title>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/cc-buildingblocks.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/app.min.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4" data-ng-controller="App1Controller">
+				<button class="btn btn-success" type="button" data-ng-click="start()">Start</button>
+				<p ng-repeat="notification in notifications">{{notification}}</p>
+			</div>
+
+			<div class="col-md-4" data-ng-controller="App2Controller">
+				<button class="btn btn-warning" type="button" data-ng-click="update()">Update</button>
+				<p ng-repeat="notification in notifications">{{notification}}</p>
+			</div>
+
+			<div class="col-md-4" data-ng-controller="App3Controller">
+				<button class="btn btn-danger" type="button" data-ng-click="stop()">Stop</button>
+				<p ng-repeat="notification in notifications">{{notification}}</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/angular/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
